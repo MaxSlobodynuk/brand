@@ -1,0 +1,130 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Забороняємо прокрутку */
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Уся висота екрану */
+  background-color: #fefefe;
+}
+
+header.hero {
+  flex: 1; /* Хедер займатиме пропорційну частину */
+  position: relative;
+  background-image: url("./images/header.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0; /* Видаляємо відступ знизу */
+  padding-bottom: 0; /* Видаляємо паддінг знизу */
+}
+
+header.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+header.hero h1 {
+  font-size: 2.2em;
+  margin: 0;
+}
+
+header.hero p {
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+main {
+  flex: 2; /* Основний контент займатиме більше простору */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Вирівнювання вгорі */
+  align-items: center;
+  padding: 0 20px; /* Без верхнього паддінгу */
+  margin-top: -30px; /* Відсутність відступу між хедером і основним контентом */
+}
+
+.features {
+  padding-top: 110px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.features h2 {
+  font-size: 1.6em;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features ul li {
+  font-size: 1em;
+  margin: 8px 0;
+  color: #555;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery-item img {
+  width: 100px;
+  height: 120px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px; /* Збільшуємо відступи в футері */
+}
+
+.telegram-link {
+  text-decoration: none;
+  padding: 15px 40px; /* Збільшуємо розмір кнопки для кращого вигляду */
+  background-color: #007bff; /* Синій фон */
+  color: #fff;
+  font-size: 1.1em;
+  border-radius: 30px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Тінь трохи м'якша */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Додано ефект збільшення */
+}
+
+.telegram-link:hover {
+  background-color: #0056b3; /* Темніший синій на ховері */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Збільшуємо тінь */
+  transform: scale(1.05); /* Додаємо ефект масштабування */
+}
+
+.telegram-link span {
+  background-color: #f5f5f5; /* Сірий фон для тексту на кнопці */
+  padding: 5px 10px; /* Легкий відступ від тексту до країв */
+  border-radius: 20px; /* Закруглені краї сірого фону */
+  color: #333; /* Темний текст */
+}
