@@ -7,20 +7,39 @@
     <link rel="stylesheet" href="./index.css" />
 
     <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2257758371267127');
-    fbq('track', 'PageView');
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "2257758371267127");
+      fbq("track", "PageView");
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2257758371267127&ev=PageView&noscript=1"
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=2257758371267127&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
 
@@ -35,17 +54,6 @@
 
       <main>
         <section class="under">
-          <!-- <ul class="under-img">
-            <li class="under-item">
-              <img src="./images/under1.png" alt="Брендовий аксесуар" />
-            </li>
-            <li class="under-item-big">
-              <img src="./images/under2.png" alt="Брендовий аксесуар" />
-            </li>
-            <li class="under-item">
-              <img src="./images/under3.png" alt="Брендовий аксесуар" />
-            </li>
-          </ul> -->
         </section>
         <section class="features">
           <h2>Якість 1:1</h2>
@@ -73,7 +81,7 @@
       </main>
       <p class="paragraph">перейти у телеграм</p>
       <footer>
-        <a href="https://t.me/Showroom_ModaLab" target="_blank" class="telegram-link">
+        <a href="https://t.me/Showroom_ModaLab" target="_blank" class="telegram-link" id="purchase-button">
           <button type="button" class="telegram-button">
             <svg
               width="24px"
@@ -111,5 +119,13 @@
         </a>
       </footer>
     </div>
+
+    <script>
+      document.getElementById('purchase-button').addEventListener('click', function() {
+        fbq('track', 'Purchase', {
+          content_name: 'Telegram Button Click',
+        });
+      });
+    </script>
   </body>
 </html>
