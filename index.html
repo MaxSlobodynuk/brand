@@ -42,7 +42,6 @@
         src="https://www.facebook.com/tr?id=2257758371267127&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
-
   </head>
   <body>
     <div class="container">
@@ -53,8 +52,7 @@
       </header>
 
       <main>
-        <section class="under">
-        </section>
+        <section class="under"></section>
         <section class="features">
           <h2>Якість 1:1</h2>
           <ul class="features-list">
@@ -81,7 +79,12 @@
       </main>
       <p class="paragraph">перейти у телеграм</p>
       <footer>
-        <a href="https://t.me/Showroom_ModaLab" target="_blank" class="telegram-link" id="purchase-button">
+        <a
+          href="https://t.me/showroom_modalab1"
+          target="_blank"
+          class="telegram-link"
+          id="purchase-button"
+        >
           <button type="button" class="telegram-button">
             <svg
               width="24px"
@@ -121,11 +124,13 @@
     </div>
 
     <script>
-      document.getElementById('purchase-button').addEventListener('click', function() {
-        fbq('track', 'Purchase', {
-          content_name: 'Telegram Button Click',
+      document
+        .getElementById("purchase-button")
+        .addEventListener("click", function () {
+          fbq("track", "Purchase", {
+            content_name: "Telegram Button Click",
+          });
         });
-      });
     </script>
   </body>
 </html>
